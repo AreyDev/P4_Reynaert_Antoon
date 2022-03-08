@@ -158,14 +158,14 @@ function fillForm() {
 
   //city of tournement
 
-  quantityNbr.value = 1; //quantity value
+  quantityNbr.value = 0; //quantity value
 
   quantityNbr.addEventListener("focus", (e) => {
     quantityErrorMsg.style.display = "none";
   });
 
   quantityNbr.addEventListener("change", (e) => {
-    if (e.target.value == "0") {
+    if (e.target.value < "0") {
       quantityErrorMsg.style.display = "inline";
       submitBtn.setAttribute("disabled");
     } else {
@@ -207,7 +207,7 @@ function fillForm() {
     ) {
       submitErrorMsg.style.display = "inline";
       submitBtn.disabled = true;
-    } else if (quantityNbr.value == "0") {
+    } else if (quantityNbr.value < "0") {
       quantityErrorMsg.style.display = "inline";
       submitBtn.disabled = true;
     } else {
