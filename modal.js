@@ -156,7 +156,7 @@ function fillForm() {
     }
   });
 
-  //city of tournement
+//city of tournement
 
   quantityNbr.value = 0; //quantity value
 
@@ -165,10 +165,7 @@ function fillForm() {
   });
 
   quantityNbr.addEventListener("change", (e) => {
-    if (e.target.value < "0") {
-      quantityErrorMsg.style.display = "inline";
-      submitBtn.setAttribute("disabled");
-    } else if (e.target.value < "99"){
+    if (e.target.value < 0 || e.target.value > 99) {
       quantityErrorMsg.style.display = "inline";
       submitBtn.setAttribute("disabled");
     } else {
