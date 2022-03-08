@@ -165,7 +165,7 @@ function fillForm() {
   });
 
   quantityNbr.addEventListener("change", (e) => {
-    if (e.target.value < "0") {
+    if (e.target.value < 0) {
       quantityErrorMsg.style.display = "inline";
       submitBtn.setAttribute("disabled");
     } else {
